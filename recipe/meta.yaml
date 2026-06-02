@@ -1,6 +1,6 @@
 {% set name = "yaxt" %}
 {% set version = "0.11.5.1" %}
-{% set build = 2 %}
+{% set build = 3 %}
 
 package:
   name: {{ name }}
