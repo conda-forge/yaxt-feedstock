@@ -1,5 +1,5 @@
 {% set name = "yaxt" %}
-{% set version = "0.12.1" %}
+{% set version = "0.12.2" %}
 {% set build = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/pism/{{ name }}-mirror/archive/v{{ version }}.tar.gz
-  sha256: 78dc6c16ee9b3eced5c81fac24e83940bf98172d6927cba189366050d7652228
+  sha256: 298a86def7aabb52b7183aea315602cfd2abbaccebbb959dbae8838a347c8b94
 
 build:
   skip: true  # [win]
