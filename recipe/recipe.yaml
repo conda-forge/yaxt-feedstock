@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: yaxt
-  version: "0.12.2.1"
-  build: 1
+  version: "0.12.2.2"
+  build: 0
   mpi: ${{ mpi | default("mpich") }}
   mpi_prefix: mpi_${{ mpi }}
   # `yaxt * *_idxtype_long_*` for the 64-bit Xt_int build (see idxtype below)
@@ -21,12 +21,12 @@ package:
 
 source:
   url: https://github.com/pism/${{ name }}-mirror/archive/v${{ version }}.tar.gz
-  sha256: 9915741a03b0df3cc721e9de665a3b8cf5909b632c2aeee104deb30dfba06d61
+  sha256: 79cbd6f085d0694b5c29e0a22219caff516e5f7db3dd813eabe08c830dc1cdec
 
 build:
   number: ${{ build }}
   skip:
-   - win
+    - win
   # Build string so packages can depend on mpi/idxtype variants explicitly:
   #   `yaxt * mpi_mpich_*` for mpich
   #   `yaxt * mpi_openmpi_*` for openmpi
